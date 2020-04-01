@@ -1,87 +1,76 @@
-The JSON file is in ASSET Folder. 
-
-The Application generates the layout based on the JSON.
-
-
-Please find the sample JSON Format:
-
 {
-	"page": [{
-		"controls": [{
-			"api_value": "Balamurugan",
-			"label": "Name",
-			"max_length": 12,
-			"min_length": 5,
-			"regex": "^[\\p{L} .\u0027-]+$",
-			"required": true,
-			"type": "text"
-		}, {
-			"api_value": "Male",
-			"label": "Gender",
-			"max_length": 12,
-			"min_length": 5,
-			"options": ["", "Male", "Female"],
-			"regex": "",
-			"required": true,
-			"type": "select"
-		}, {
-			"api_value": "others, ",
-			"label": "Languages Known",
-			"max_length": 12,
-			"min_length": 5,
-			"options": ["Tamil", "English", "others"],
-			"regex": "",
-			"required": false,
-			"type": "checkbox"
-		}],
-		"title": "Basic Info"
-	}, {
-		"controls": [{
-			"api_value": "gbala@gmail.com",
-			"label": "Email",
-			"max_length": 25,
-			"min_length": 5,
-			"regex": "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$",
-			"required": true,
-			"type": "text"
-		}, {
-			"api_value": "",
-			"label": "Maritial Status",
-			"max_length": 12,
-			"min_length": 5,
-			"options": ["", "Married", "Single"],
-			"regex": "",
-			"required": false,
-			"type": "select"
-		}, {
-			"api_value": "JAVA, ",
-			"label": "Computer Languages Known",
-			"max_length": 12,
-			"min_length": 5,
-			"options": ["C", "C++", "JAVA", "Kotlin"],
-			"regex": "",
-			"required": false,
-			"type": "checkbox"
-		}],
-		"title": "Communication Info"
-	}, {
-		"controls": [{
-			"label": "Address Line",
-			"max_length": 25,
-			"min_length": 5,
-			"regex": "",
-			"required": false,
-			"type": "text"
-		}, {
-			"api_value": "Others",
-			"label": "State",
-			"max_length": 12,
-			"min_length": 5,
-			"options": ["", "Tamilnadu", "Others"],
-			"regex": "",
-			"required": true,
-			"type": "select"
-		}],
-		"title": "Other Info"
-	}]
+  "page": [{
+    "title": "Basic Info",
+    "controls": [{
+      "label": "Name",
+      "type": "text",
+      "required": true,
+      "min_length": 5,
+      "max_length": 12,
+      "regex": "^[\\p{L} .'-]+$",
+      "options": null
+    }, {
+      "label": "Gender",
+      "type": "select",
+      "required": true,
+      "min_length": 5,
+      "max_length": 12,
+      "regex": "",
+      "options": ["", "Male", "Female"]
+    }, {
+      "label": "Languages Known",
+      "type": "checkbox",
+      "required": false,
+      "min_length": 5,
+      "max_length": 12,
+      "regex": "",
+      "options": ["Tamil", "English", "others"]
+    }]
+  }, {
+    "title": "Communication Info",
+    "controls": [{
+      "label": "Email",
+      "type": "text",
+      "required": true,
+      "min_length": 5,
+      "max_length": 25,
+      "regex": "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$",
+      "options": null
+    }, {
+      "label": "Maritial Status",
+      "type": "select",
+      "required": false,
+      "min_length": 5,
+      "max_length": 12,
+      "regex": "",
+      "options": ["", "Married", "Single"]
+    }, {
+      "label": "Computer Languages Known",
+      "type": "checkbox",
+      "required": false,
+      "min_length": 5,
+      "max_length": 12,
+      "regex": "",
+      "options": ["C", "C++", "JAVA", "Kotlin"]
+    }]
+  }, {
+    "title": "Other Info",
+    "controls": [{
+      "label": "Address Line",
+      "type": "text",
+      "required": false,
+      "min_length": 5,
+      "max_length": 25,
+      "regex": "",
+      "options": null
+    }, {
+      "label": "State",
+      "type": "select",
+      "required": true,
+      "min_length": 5,
+      "max_length": 12,
+      "regex": "",
+      "options": ["", "Tamilnadu", "Others"]
+    }]
+  }]
 }
